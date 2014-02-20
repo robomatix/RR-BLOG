@@ -1,0 +1,12 @@
+<plugin>
+	<nom>blogRRbootstrap</nom>
+	<version>0.0.1</version>
+	<etat>stable</etat>
+	<auteur>Robomatix Rebirth</auteur>
+	<licence>GPL</licence>
+	<prefix>theme_blogrrbootstrap</prefix>
+	<description>Un blog avec Bootstrap de base</description>
+	<icon>vignette.png</icon>
+	<categorie>theme</categorie>
+        <utilise id="Z" version="[1.7.26;]" />
+</plugin>
