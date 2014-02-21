@@ -1,0 +1,27 @@
+<body>
+    <div class="container-fluid">
+        [(#REM) DIV . row vraiment utile ? ]
+        <div class="row">
+        <header class="col-md-6 col-md-offset-3 page-header">
+            <INCLURE{fond=inclure/entete,env}>
+    </header>
+
+    [(#REM) http://getbootstrap.com/components/#navbar ]
+    <nav class="col-md-6 col-md-offset-3 navbar navbar-inverse" role="navigation">
+        <INCLURE{fond=inclure/barre-nav,env}>
+</nav>
+
+[(#REM) http://www.w3schools.com/tags/tag_main.asp ]
+<main class="col-md-6 col-md-offset-3 ">
+    <INCLURE{fond=contenu/#ENV{type},env}>
+</main>
+
+
+[(#REM) Existe-t-il une class page-footer ?]
+<footer class="col-md-6 col-md-offset-3 text-center well well-sm">
+    <INCLURE{fond=inclure/pied,env}>
+</footer>
+</div>
+</div>
+<INCLURE{fond=inclure/js-bas-page,env}>
+</body>
