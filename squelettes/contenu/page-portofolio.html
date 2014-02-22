@@ -1,0 +1,27 @@
+<BOUCLE_portofolio_article(ARTICLES){id_article}>
+            <article>
+
+                <h1 class="page-header">#TITRE <small>Portofolio</small></h1>
+                <p>Publié le <time datetime="[(#DATE)]" pubdate>[(#DATE|nom_jour)] [(#DATE|jour)] [(#DATE|nom_mois)] [(#DATE|annee)]</time>.</p>
+
+    <B_documents_portfolio>
+
+                <ul class="list-group">
+                <BOUCLE_documents_portfolio(DOCUMENTS) {id_article} {mode=document}{extension IN png,jpg,gif} {par num titre, date}{vu=non}>
+                    <li class="list-group-item">
+                    [(#FICHIER
+                    |image_reduire{870,0}
+                    |inserer_attribut{class,img-responsive img-thumbnail}
+                    |inserer_attribut{id,image-#ID_DOCUMENT}
+                    |inserer_attribut{alt,[(#TITRE|attribut_html|couper{80})]})]
+                    </li>
+                    <li class="list-group-item">
+                    <p><a href="#URL_ARTICLE" class="btn btn-primary btn-sm" role="button">Aller à l'article : #_portofolio_article:TITRE</a></p>
+                    </li>
+                </BOUCLE_documents_portfolio>
+            </ul>
+                
+
+            
+        </article>
+</BOUCLE_portofolio_article>

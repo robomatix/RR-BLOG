@@ -1,0 +1,30 @@
+<BOUCLE_contenu_article(ARTICLES){id_article}>
+    <article  class="panel panel-default">
+
+        <div class="panel-heading">
+            <h1>#TITRE</h1>
+            <p>Publié le <time datetime="[(#DATE)]" pubdate>[(#DATE|nom_jour)] [(#DATE|jour)] [(#DATE|nom_mois)] [(#DATE|annee)]</time>.</p>
+            [(#LOGO_ARTICLE|image_reduire{870,0}|inserer_attribut{alt,[(#TITRE|couper{60}|attribut_html)]}|inserer_attribut{class,img-responsive})]
+        </div>
+
+        <div class="panel-body">
+            #TEXTE
+
+            [(#REM) Portfolio : album d'images ]
+            <B_documents_portfolio>
+                    <div class="row">
+                        <BOUCLE_documents_portfolio(DOCUMENTS) {id_article} {mode=document}{extension IN png,jpg,gif} {par num titre, date}{vu=non}>[
+                            <div class="col-xs-6 col-md-3">
+                                <a href="(#URL_PAGE{portofolio,id_article=#_contenu_article:ID_ARTICLE})#image-#ID_DOCUMENT"
+                                   type="#MIME_TYPE"
+                                   [ title="(#TITRE|attribut_html|couper{80})"] class="thumbnail">[(#FICHIER
+                                    |image_reduire{200,0}
+                                    |inserer_attribut{alt,[(#TITRE|attribut_html|couper{80})]})]</a>
+                            </div>
+                            ]</BOUCLE_documents_portfolio>
+                    </div>
+            </B_documents_portfolio>
+        </div>
+
+    </article>
+</BOUCLE_contenu_article>
