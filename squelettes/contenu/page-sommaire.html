@@ -2,10 +2,10 @@
     <INCLURE{fond=inclure/resume/article-jumbotron,id_article}>
 </BOUCLE_dernier_article_jumbotron>
 
-<div class="row">
-     <div class="col-md-12">
+<section class="row">
+    <div class="col-md-12">
         <BOUCLE_derniers_articles_thumbnail(ARTICLES){par date}{inverse}{1,5}>
-<INCLURE{fond=inclure/resume/article-thumbnail,id_article}>
-        </BOUCLE_derniers_articles_thumbnail>
+            <INCLURE{fond=inclure/resume/article-thumbnail,id_article}>
+    </BOUCLE_derniers_articles_thumbnail>
 </div>
-    </div>
+</section>

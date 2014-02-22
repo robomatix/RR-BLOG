@@ -1,0 +1,15 @@
+<BOUCLE_contenu_rubrique(RUBRIQUES){id_rubrique}>
+    [(#REM) Mettre une balise head ?]
+    <div class="page-header">
+        [(#REM) http://forum.spip.net/fr_205607.html#forum205660]
+        <h1>#TITRE [<small>(#DESCRIPTIF|PtoBR)</small></h1>]
+    </div>
+
+    <section class="row">
+        <div class="col-md-12">
+            <BOUCLE_articles(ARTICLES){id_rubrique}{!par date}>
+                <INCLURE{fond=inclure/resume/article-thumbnail,id_article}>
+        </BOUCLE_articles>
+    </div>
+</section>
+</BOUCLE_contenu_rubrique>
