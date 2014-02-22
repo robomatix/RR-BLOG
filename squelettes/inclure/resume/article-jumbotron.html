@@ -1,0 +1,13 @@
+<BOUCLE_article_jumbotron(ARTICLES){id_article}>
+    <div class="jumbotron">
+        [(#REM) http://romy.tetue.net/remplir-les-attributs-alt-et-title-dans-spip ]
+        <a href="#URL_ARTICLE"[ title="(#TITRE|couper{80}|attribut_html)"]>
+            [(#LOGO_ARTICLE|image_reduire{870,0}|inserer_attribut{alt,[(#TITRE|couper{60}|attribut_html)]}|inserer_attribut{class,img-responsive})]
+        </a>
+        <h1>#TITRE</h1>
+        [(#REM) http://www.alsacreations.com/article/lire/1386-html5-element-time.html ]
+        <p>Publié le <time datetime="[(#DATE|annee)]-[(#DATE|mois)]-[(#DATE|mois)]" pubdate>[(#DATE|affdate_court)]</time>.</p>
+        #INTRODUCTION
+        <p><a class="btn btn-primary btn-lg" role="button">Lire : #TITRE</a></p>
+    </div>
+</BOUCLE_article_jumbotron>

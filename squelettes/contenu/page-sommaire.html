@@ -1,31 +1,11 @@
 <BOUCLE_dernier_article_jumbotron(ARTICLES){par date}{inverse}{0,1}>
-    <div class="jumbotron">
-        [(#REM) http://romy.tetue.net/remplir-les-attributs-alt-et-title-dans-spip ]
-        <a href="#URL_ARTICLE"[ title="(#TITRE|couper{80}|attribut_html)"]>
-            [(#LOGO_ARTICLE|image_reduire{870,0}|inserer_attribut{alt,[(#TITRE|couper{60}|attribut_html)]}|inserer_attribut{class,img-responsive})]
-        </a>
-        <h1>#TITRE</h1>
-        [(#REM) http://www.alsacreations.com/article/lire/1386-html5-element-time.html ]
-        <p>Publié le <time datetime="[(#DATE|annee)]-[(#DATE|mois)]-[(#DATE|mois)]" pubdate>[(#DATE|affdate_court)]</time>.</p>
-        #INTRODUCTION
-        <p><a class="btn btn-primary btn-lg" role="button">Lire : #TITRE</a></p>
-    </div>
+    <INCLURE{fond=inclure/resume/article-jumbotron,id_article}>
 </BOUCLE_dernier_article_jumbotron>
 
 <div class="row">
      <div class="col-md-12">
-        <BOUCLE_derniers_articles_thumbnail(ARTICLES){par date}{inverse}{1,6}>
-            <div class="thumbnail">
-                <a href="#URL_ARTICLE"[ title="(#TITRE|couper{80}|attribut_html)"]>
-                    [(#LOGO_ARTICLE|image_reduire{870,0}|inserer_attribut{alt,[(#TITRE|couper{60}|attribut_html)]})]
-                </a>
-                <div class="caption">
-                    <h3>#TITRE</h3>
-                    <p>Publié le <time datetime="[(#DATE|annee)]-[(#DATE|mois)]-[(#DATE|mois)]" pubdate>[(#DATE|affdate_court)]</time>.</p>
-                    #INTRODUCTION
-                    <p><a class="btn btn-primary btn-lg" role="button">Lire : #TITRE</a></p>
-                </div>
-            </div>
+        <BOUCLE_derniers_articles_thumbnail(ARTICLES){par date}{inverse}{1,5}>
+<INCLURE{fond=inclure/resume/article-thumbnail,id_article}>
         </BOUCLE_derniers_articles_thumbnail>
 </div>
     </div>
