@@ -5,11 +5,28 @@
         <h1>#TITRE [<small>(#DESCRIPTIF|PtoBR)</small></h1>]
     </div>
 
+    <BOUCLE_article_jumbotron(ARTICLES){par date}{inverse}{0,1}{si #ENV{debut_articles}|=={''}}>
+        #SET{id_article_jumbotron,#ID_ARTICLE}        
+</BOUCLE_article_jumbotron>
+
+<B_articles>
+    #PAGINATION  
     <section class="row">
         <div class="col-md-12">
-            <BOUCLE_articles(ARTICLES){id_rubrique}{!par date}>
-                <INCLURE{fond=inclure/resume/article-thumbnail,id_article}>
-        </BOUCLE_articles>
-    </div>
-</section>
-</BOUCLE_contenu_rubrique>
+
+            <BOUCLE_articles(ARTICLES){id_rubrique}{!par date}{pagination 7}>
+                [(#GET{id_article_jumbotron}|=={#ID_ARTICLE}|oui)
+                <INCLURE{fond=inclure/resume/article-jumbotron,id_article}>
+                    ]
+                    [(#GET{id_article_jumbotron}|!={#ID_ARTICLE}|oui)
+                    <INCLURE{fond=inclure/resume/article-thumbnail,id_article}>
+                        ]
+                        </BOUCLE_articles>
+
+                        </div>
+                        </section>
+                        #PAGINATION
+                        </B_articles>
+                        </div>
+                        </section>
+                        </BOUCLE_contenu_rubrique>
