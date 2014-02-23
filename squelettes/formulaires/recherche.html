@@ -1,0 +1,8 @@
+<form action="[(#ENV{action})]" class="navbar-form navbar-right" role="search">
+    [(#ENV{action}|form_hidden)]
+    [<input type="hidden" name="lang" value="(#ENV{lang})" />]
+    <div class="form-group">
+        <input type="[(#HTML5|?{search,text})]" name="recherche" class="form-control" placeholder="<:info_rechercher_02:>"[ value="(#ENV{recherche})"]>
+    </div>
+    <button type="submit" class="btn btn-default"><:info_rechercher:></button>
+</form>

@@ -1,0 +1,34 @@
+<nav>
+    <ol class="breadcrumb">
+        <li><a href="#URL_SITE_SPIP/"><:accueil_site:></a></li>
+        <li class="active"><:info_rechercher:></li> 
+        <li class="active">#RECHERCHE</li>
+    </ol>
+</nav>
+
+<div class="page-header">
+    [(#REM) http://forum.spip.net/fr_205607.html#forum205660]
+    <h1><:resultats_recherche:> [<small>(#RECHERCHE|PtoBR)</small></h1>]
+</div>
+
+
+<B_articles>
+    #PAGINATION  
+    <section class="row">
+        <div class="col-md-12">
+
+            <BOUCLE_articles(ARTICLES) {recherche} {par points} {inverse} {pagination 7}>
+                <INCLURE{fond=inclure/resume/article-thumbnail,id_article}>
+        </BOUCLE_articles>
+    </div>
+</section>
+#PAGINATION
+</B_articles>
+<section class="row">
+    <div class="col-md-12">
+        <p class="text-danger">Il n'y a aucun résultat pour <b>#RECHERCHE</b></p>
+    </div>
+</section>
+<//B_articles>
+</div>
+</section>
