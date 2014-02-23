@@ -1,0 +1,31 @@
+[(#REM) Initialisation]
+#SET{width,870}
+#SET{height,489}
+#SET{title,0}
+#SET{byline,0}
+#SET{portrait,0}
+#SET{color,ffffff}
+#SET{autoplay,0}
+#SET{loop,0}
+[(#REM) Modéle pour les articles ]
+[(#ENV{modele}|=={article}|oui)
+[(#SET{width,[(#ENV{width,[(#GET{width})]})]})]
+[(#SET{height,[(#ENV{height,[(#GET{height})]})]})]
+[(#SET{title,[(#ENV{title,[(#GET{title})]})]})]
+[(#SET{byline,[(#ENV{byline,[(#GET{byline})]})]})]
+[(#SET{portrait,[(#ENV{portrait,[(#GET{portrait})]})]})]
+[(#SET{color,[(#ENV{color,[(#GET{color})]})]})]
+[(#SET{autoplay,[(#ENV{autoplay,[(#GET{autoplay})]})]})]
+[(#SET{loop,[(#ENV{loop,[(#GET{loop})]})]})]
+]
+<div class="videoWrapper">
+<iframe
+    src="http://player.vimeo.com/video/[(#ENV{id})]?title=#GET{title}&byline=#GET{byline}&portrait=#GET{portrait}&color=#GET{color}&autoplay=#GET{autoplay}&loop=#GET{loop}"
+        width="#GET{width}"
+    height="#GET{height}"
+    frameborder="0"
+    webkitallowfullscreen
+    mozallowfullscreen
+    allowfullscreen>
+</iframe>
+</div>
