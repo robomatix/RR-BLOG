@@ -5,14 +5,16 @@
 #SET{pages,#GET{premiere}|range{#GET{derniere}}}
 #SET{sep,#ENV{separateur,''}}
 <B_pages>
-    <ul class="pagination pagination-lg">
-        <BOUCLE_pages(POUR){tableau #GET{pages}}><li[(#COMPTEUR_BOUCLE|=={#ENV{page_courante}}|oui) class="active"]>[
-		(#SET{item, #VALEUR|moins{1}|mult{#ENV{pas}} })
-		]
-                [(#ENV{url}
-		|parametre_url{#ENV{debut},#GET{item}|?{#GET{item}}}
-		|ancre_url{#ENV{ancre}}
-		|lien_ou_expose{#GET{item},#VALEUR|=={fause_valeur_de_test_pour_toujours_avoir_des_liens},'','',nofollow})]</li>
-        </BOUCLE_pages>
+    <nav>
+        <ul class="pagination pagination-lg">
+            <BOUCLE_pages(POUR){tableau #GET{pages}}><li[(#COMPTEUR_BOUCLE|=={#ENV{page_courante}}|oui) class="active"]>[
+                    (#SET{item, #VALEUR|moins{1}|mult{#ENV{pas}} })
+                    ]
+                    [(#ENV{url}
+                    |parametre_url{#ENV{debut},#GET{item}|?{#GET{item}}}
+                    |ancre_url{#ENV{ancre}}
+                    |lien_ou_expose{#GET{item},#VALEUR|=={fause_valeur_de_test_pour_toujours_avoir_des_liens},'','',nofollow})]</li>
+            </BOUCLE_pages>
         </ul>
+    </nav>
 </B_pages>
