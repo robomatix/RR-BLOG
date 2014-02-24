@@ -347,6 +347,14 @@
 /*# sourceMappingURL=bootstrap-theme.css.map */
 
 /**********************************/
+/* Ajout Pour compléter bootstrap */
+/********************************/
+
+.btn-break {
+     white-space: normal !important; // http://forum.alsacreations.com/topic.php?tid=70974&fid=4
+}
+
+/**********************************/
 /* Ajout RR pour Responsiv vidéo */
 /********************************/
 

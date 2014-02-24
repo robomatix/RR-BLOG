@@ -4,7 +4,7 @@
             [(#LOGO_ARTICLE|image_reduire{870,0}|inserer_attribut{alt,[(#TITRE|couper{60}|attribut_html)]})]
         </a>
         <div class="caption">
-            <h3>#TITRE</h3>
+            <h3><a href="#URL_ARTICLE"[ title="(#TITRE|couper{80}|attribut_html)"]>#TITRE</a></h3>
             <p>Publié le <time datetime="[(#DATE)]" pubdate>[(#DATE|nom_jour)] [(#DATE|jour)] [(#DATE|nom_mois)] [(#DATE|annee)]</time>.</p>
             <h5>
                 <BOUCLE_mots_cles(MOTS){id_article}>
@@ -14,7 +14,7 @@
                 </BOUCLE_mots_cles>
             </h5>
             #INTRODUCTION
-            <p><a href="#URL_ARTICLE" class="btn btn-primary btn-lg" role="button">Lire : #TITRE</a></p>
+            <p><a href="#URL_ARTICLE"[ title="(#TITRE|couper{80}|attribut_html)"] class="btn btn-primary btn-lg btn-break" role="button">Lire : #TITRE</a></p>
         </div>
     </div>
 </BOUCLE_article_thumbnail>
