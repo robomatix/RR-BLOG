@@ -5,7 +5,7 @@
 #SET{pages,#GET{premiere}|range{#GET{derniere}}}
 #SET{sep,#ENV{separateur,''}}
 <B_pages>
-    <nav>
+    <nav class="text-center">
         <ul class="pagination pagination-lg">
             <BOUCLE_pages(POUR){tableau #GET{pages}}><li[(#COMPTEUR_BOUCLE|=={#ENV{page_courante}}|oui) class="active"]>[
                     (#SET{item, #VALEUR|moins{1}|mult{#ENV{pas}} })
