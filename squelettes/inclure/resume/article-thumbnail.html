@@ -6,11 +6,9 @@
         <div class="caption">
             <h3><a href="#URL_ARTICLE"[ title="(#TITRE|couper{80}|attribut_html)"]>#TITRE</a></h3>
             <p>Publié le <time datetime="[(#DATE)]" pubdate>[(#DATE|nom_jour)] [(#DATE|jour)] [(#DATE|nom_mois)] [(#DATE|annee)]</time>.</p>
-            <h5>
+            <h5 class="col-md-12 padding-0">
                 <BOUCLE_mots_cles(MOTS){id_article}>
-                    <a href="#URL_MOT">
-                        <span class="label label-primary">#TITRE</span>                            
-                    </a>
+             <span class="label label-primary"><a href="#URL_MOT">#TITRE</a></span>
                 </BOUCLE_mots_cles>
             </h5>
             #INTRODUCTION

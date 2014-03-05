@@ -17,9 +17,7 @@
             <p>Publié le <time datetime="[(#DATE)]" pubdate>[(#DATE|nom_jour)] [(#DATE|jour)] [(#DATE|nom_mois)] [(#DATE|annee)]</time>.</p>
             <h5>
                 <BOUCLE_mots_cles(MOTS){id_article}>
-                    <a href="#URL_MOT">
-                        <span class="label label-primary">#TITRE</span>                            
-                    </a>
+                   <span class="label label-primary"><a href="#URL_MOT">#TITRE</a></span>
                 </BOUCLE_mots_cles>
             </h5>
             [(#LOGO_ARTICLE|image_reduire{870,0}|inserer_attribut{alt,[(#TITRE|couper{60}|attribut_html)]}|inserer_attribut{class,img-responsive})]
