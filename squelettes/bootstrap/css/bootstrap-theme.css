@@ -394,3 +394,8 @@ h5 a:hover
 .spip_documents_right { float: right; margin-left: 1.5em; }
 .spip_doc_titre {}
 .spip_doc_descriptif { clear: both; }
+
+
+.flattr{
+    float: right;
+}
