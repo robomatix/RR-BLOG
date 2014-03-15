@@ -41,8 +41,16 @@
                         ]</BOUCLE_documents_portfolio>
                 </div>
             </B_documents_portfolio>
-<div id="socialtags">[(#REM) Pour afficher boutons rs]</div>
-                    [(#PS)]
+<div id="partage-social" class="pull-right">
+    <p class="centered-text"><span class="label label-default">Vous avez aimé ? Partager !</span></p>
+    [(#REM) http://korben.info/bouton-partage-twitter-facebook-sans-tracking.html ]
+    [(#REM) http://www.cssauthor.com/free-social-media-icon-sets/ ]
+        <a target="_blank" title="Twitter" href="https://twitter.com/share?url=#URL_SITE_SPIP/#URL_ARTICLE&text=#TITRE&via=robomatix" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;"><img src="#CHEMIN{images/twitter_1.png}" alt="Twitter" /></a>
+        <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u=#URL_SITE_SPIP/#URL_ARTICLE&t=#TITRE" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"><img src="#CHEMIN{images/fb_1.png}" alt="Facebook" /></a>
+        <a target="_blank" title="Google +" href="https://plus.google.com/share?url=#URL_SITE_SPIP/#URL_ARTICLE&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="#CHEMIN{images/google_plus.png}" alt="Google Plus" /></a>
+        <a target="_blank" title="Tumblr" href="http://www.tumblr.com/share/photo?source=[(#LOGO_ARTICLE|image_reduire{500,0}|liens_absolus|extraire_attribut{src}|urlencode)]&caption=Cliquez sur l'image pour accéder à l'article : #TITRE&click_thru=#URL_SITE_SPIP/#URL_ARTICLE" rel="nofollow" onclick="javascript:window.open(this.href, '','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="#CHEMIN{images/tumblr.png}" alt="Tumblr" /></a>
+        <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=#URL_SITE_SPIP/#URL_ARTICLE&title=#TITRE" rel="nofollow" onclick="javascript:window.open(this.href, '','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="#CHEMIN{images/linkedin.png}" alt="Linkedin" /></a>
+</div>
         </div>
         
 

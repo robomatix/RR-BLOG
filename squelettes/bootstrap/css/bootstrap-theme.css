@@ -361,6 +361,9 @@ h5 a:hover
 {
    color: #fff;
 }
+.centered-text {
+    text-align:center
+}
 /**********************************/
 /* Ajout RR pour Responsiv vidéo */
 /********************************/
@@ -394,8 +397,3 @@ h5 a:hover
 .spip_documents_right { float: right; margin-left: 1.5em; }
 .spip_doc_titre {}
 .spip_doc_descriptif { clear: both; }
-
-
-.flattr{
-    float: right;
-}
