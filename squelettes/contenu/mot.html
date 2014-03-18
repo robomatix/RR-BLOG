@@ -5,7 +5,7 @@
         <h1>#TITRE [<small>(#DESCRIPTIF|PtoBR)</small></h1>]
     </div>
 
-    <BOUCLE_article_jumbotron(ARTICLES){id_mot}{par date}{inverse}{0,1}{si #ENV{debut_articles}|=={''}}>
+    <BOUCLE_article_jumbotron(ARTICLES){id_mot}{par date}{inverse}{0,1}{si #ENV{debut_articles}|=={''}}{lang=fr}>
         #SET{id_article_jumbotron,#ID_ARTICLE}        
 </BOUCLE_article_jumbotron>
 
@@ -14,7 +14,7 @@
     <section class="row">
         <div class="col-md-12">
 
-            <BOUCLE_articles(ARTICLES){id_mot}{!par date}{pagination 7}>
+            <BOUCLE_articles(ARTICLES){id_mot}{!par date}{pagination 7}{lang=fr}>
                 [(#GET{id_article_jumbotron}|=={#ID_ARTICLE}|oui)
                 <INCLURE{fond=inclure/resume/article-jumbotron,id_article}>
                     ]

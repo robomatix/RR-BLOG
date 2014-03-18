@@ -1,10 +1,10 @@
-<BOUCLE_article_jumbotron(ARTICLES){par date}{inverse}{0,1}>
+<BOUCLE_article_jumbotron(ARTICLES){par date}{inverse}{0,1}{lang=fr}>
     <INCLURE{fond=inclure/resume/article-jumbotron,id_article}>
 </BOUCLE_article_jumbotron>
 
 <section class="row">
     <div class="col-md-12">
-        <BOUCLE_derniers_articles_thumbnail(ARTICLES){par date}{inverse}{1,5}>
+        <BOUCLE_derniers_articles_thumbnail(ARTICLES){par date}{inverse}{1,5}{lang=fr}>
             <INCLURE{fond=inclure/resume/article-thumbnail,id_article}>
     </BOUCLE_derniers_articles_thumbnail>
 </div>

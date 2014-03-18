@@ -17,10 +17,15 @@
             <p>Publié le <time datetime="[(#DATE)]" pubdate>[(#DATE|nom_jour)] [(#DATE|jour)] [(#DATE|nom_mois)] [(#DATE|annee)]</time>.</p>
             <h5>
                 <BOUCLE_mots_cles(MOTS){id_article}>
-                   <span class="label label-primary"><a href="#URL_MOT">#TITRE</a></span>
+                    <span class="label label-primary"><a href="#URL_MOT">#TITRE</a></span>
                 </BOUCLE_mots_cles>
             </h5>
+            <BOUCLE_traductions(ARTICLES){traduction}{exclus}>
+                [<p class="well well-sm"><a href="#URL_ARTICLE" rel="alternate" hreflang="#LANG">(#LANG|traduire_nom_langue)</a></p>]
+            </BOUCLE_traductions>
+            <BOUCLE_article_logo(ARTICLES){traduction}{origine_traduction}>
             [(#LOGO_ARTICLE|image_reduire{870,0}|inserer_attribut{alt,[(#TITRE|couper{60}|attribut_html)]}|inserer_attribut{class,img-responsive})]
+            </BOUCLE_article_logo>
         </div>
 
         <div class="#EDIT{texte} panel-body">
@@ -41,19 +46,30 @@
                         ]</BOUCLE_documents_portfolio>
                 </div>
             </B_documents_portfolio>
-<div id="partage-social" class="pull-right">
-    <p class="centered-text"><span class="label label-default">Vous avez aimé ? Partager !</span></p>
-    [(#REM) http://korben.info/bouton-partage-twitter-facebook-sans-tracking.html ]
-    [(#REM) http://www.cssauthor.com/free-social-media-icon-sets/ ]
-        <a target="_blank" title="Twitter" href="https://twitter.com/share?url=#URL_SITE_SPIP/#URL_ARTICLE&text=#TITRE&via=robomatix" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;"><img src="#CHEMIN{images/twitter_1.png}" alt="Twitter" /></a>
-        <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u=#URL_SITE_SPIP/#URL_ARTICLE&t=#TITRE" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"><img src="#CHEMIN{images/fb_1.png}" alt="Facebook" /></a>
-        <a target="_blank" title="Google +" href="https://plus.google.com/share?url=#URL_SITE_SPIP/#URL_ARTICLE&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="#CHEMIN{images/google_plus.png}" alt="Google Plus" /></a>
-        <a target="_blank" title="Tumblr" href="http://www.tumblr.com/share/photo?source=[(#LOGO_ARTICLE|image_reduire{500,0}|liens_absolus|extraire_attribut{src}|urlencode)]&caption=Cliquez sur l'image pour accéder à l'article : #TITRE&click_thru=#URL_SITE_SPIP/#URL_ARTICLE" rel="nofollow" onclick="javascript:window.open(this.href, '','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="#CHEMIN{images/tumblr.png}" alt="Tumblr" /></a>
-        <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=#URL_SITE_SPIP/#URL_ARTICLE&title=#TITRE" rel="nofollow" onclick="javascript:window.open(this.href, '','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="#CHEMIN{images/linkedin.png}" alt="Linkedin" /></a>
-</div>
+
+
+            <div id="partage-social" class="pull-right">
+                <p class="centered-text"><span class="label label-default"><multi>[fr]Vous avez aimé ? Partager ! [en]You liked it ? Share it ! </multi></span></p>
+                [(#REM) http://korben.info/bouton-partage-twitter-facebook-sans-tracking.html ]
+                [(#REM) http://www.cssauthor.com/free-social-media-icon-sets/ ]
+                <a target="_blank" title="Twitter" href="https://twitter.com/share?url=#URL_SITE_SPIP/#URL_ARTICLE&text=#TITRE&via=robomatix" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');
+                        return false;"><img src="#CHEMIN{images/twitter_1.png}" alt="Twitter" /></a>
+                <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u=#URL_SITE_SPIP/#URL_ARTICLE&t=#TITRE" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');
+                        return false;"><img src="#CHEMIN{images/fb_1.png}" alt="Facebook" /></a>
+                <a target="_blank" title="Google +" href="https://plus.google.com/share?url=#URL_SITE_SPIP/#URL_ARTICLE&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');
+                        return false;"><img src="#CHEMIN{images/google_plus.png}" alt="Google Plus" /></a>
+                <a target="_blank" title="Tumblr" href="http://www.tumblr.com/share/photo?source=[(#LOGO_ARTICLE|image_reduire{500,0}|liens_absolus|extraire_attribut{src}|urlencode)]&caption=Cliquez sur l'image pour accéder à l'article : #TITRE&click_thru=#URL_SITE_SPIP/#URL_ARTICLE" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');
+                        return false;"><img src="#CHEMIN{images/tumblr.png}" alt="Tumblr" /></a>
+                <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=#URL_SITE_SPIP/#URL_ARTICLE&title=#TITRE" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');
+                        return false;"><img src="#CHEMIN{images/linkedin.png}" alt="Linkedin" /></a>
+            </div>
         </div>
         
-
-
     </article>
+        [(#LANG|=={en}|oui)
+        <div class="alert alert-danger">
+            <p>For the time being, only one article is in english on this blog. I'll write more english translation of my articles later on ...</p> 
+            <p>Within a year, my website should be fully bilingual. Even thougth, I won't translate all my articles ... Only the mains ones ... </p> 
+        </div>
+        ]
 </BOUCLE_contenu_article>
