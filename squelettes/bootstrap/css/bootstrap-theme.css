@@ -345,10 +345,16 @@
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05), 0 1px 0 rgba(255, 255, 255, .1);
 }
 /*# sourceMappingURL=bootstrap-theme.css.map */
-
-/**********************************/
-/* Ajout Pour compléter bootstrap */
 /********************************/
+/* Ajout Pour TORDRE bootstrap */
+/******************************/
+.img-responsive{
+    display: inline-block;// Pour pouvoir centrer les images malgrés css bootstrap
+}
+
+/***********************************/
+/* Ajout Pour compléter bootstrap */
+/*********************************/
 
 .btn-break {
     white-space: normal !important; // http://forum.alsacreations.com/topic.php?tid=70974&fid=4
@@ -392,15 +398,11 @@ h5 a:hover
     display:block;
     background-color:transparent;
     width: 100%;
+}
+.bandcamp.bandcamp_album iframe {
     height: 120px;
 }
-.bandcamp-track iframe {
-    border: 0; 
-    margin:0 0 10px 0;
-    padding:0;
-    display:block;
-    background-color:transparent;
-    width: 100%;
+.bandcamp.bandcamp_track iframe {
     height: 42px;
 }
 

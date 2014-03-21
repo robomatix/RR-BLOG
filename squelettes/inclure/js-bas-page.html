@@ -16,6 +16,11 @@
         // Ouvrir dans une nouvelle fenêtre tous les liens ayant comme class spip_out ect...
         $('a.spip_out,a.spip_url').attr("target", "_blank");
 
+        // Ajouter la class img-responsive aux images
+        $('.spip_documents img').each(function() {
+            $(this).addClass('img-responsive');
+        })
+
         // Fade in picto rs auchargement, fadein sur entrée, fadeout sur sortie souris
         $('#partage-social a img').fadeTo(500, 0.58);
         $("#partage-social a img").hover(
@@ -29,23 +34,23 @@
 
 
         [(#REM) D'après http://contrib.spip.net/SPIP-FAT-Free-Art-Template ]
-        // Lecteur Bandcamp Album
-        $('.bandcamp').each(function() {
+                // Lecteur Bandcamp Album
+                $('.bandcamp_album').each(function() {
             var bandcamp = document.createElement('iframe');
             bandcamp.src = 'http://bandcamp.com/EmbeddedPlayer/album=' + $(this).attr('id') + '/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=true/artwork=small/transparent=true/';
             $(this)[0].appendChild(bandcamp);
         });
-                // Lecteur Bandcamp Track
-        $('.bandcamp-track').each(function() {
+        // Lecteur Bandcamp Track
+        $('.bandcamp_track').each(function() {
             var bandcamp = document.createElement('iframe');
             bandcamp.src = 'http://bandcamp.com/EmbeddedPlayer/track=' + $(this).attr('id') + '/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/';
             $(this)[0].appendChild(bandcamp);
         });
 
     });
-    
-    
-    
+
+
+
     // GA DEB
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;

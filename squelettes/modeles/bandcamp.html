@@ -1,2 +1,5 @@
-[(#REM) http://contrib.spip.net/SPIP-FAT-Free-Art-Template ]
-<div class="bandcamp" id="#ENV{id}"></div>
+#SET{class_modele,class="bandcamp bandcamp_album"}
+[(#ENV{modele}|=={track}|oui)
+#SET{class_modele,class="bandcamp bandcamp_track"}
+]
+<div #GET{class_modele} id="#ENV{identifiant}"></div>
