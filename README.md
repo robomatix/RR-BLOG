@@ -9,7 +9,7 @@ Vous pouvez le voir à cette adresse http://blog.robomatix.net
 
 ToDo List :
 
-Commentaires
-fiche rédacteur
-Bilinguisme fr/en
+ * Commentaires
+ * fiche rédacteur
+ * Bilinguisme fr/en
 
