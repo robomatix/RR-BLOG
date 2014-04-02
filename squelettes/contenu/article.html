@@ -24,7 +24,7 @@
                 [<p class="well well-sm"><a href="#URL_ARTICLE" rel="alternate" hreflang="#LANG">(#LANG|traduire_nom_langue)</a></p>]
             </BOUCLE_traductions>
             <BOUCLE_article_logo(ARTICLES){traduction}{origine_traduction}>
-                [(#LOGO_ARTICLE|image_reduire{870,0}|inserer_attribut{alt,[(#TITRE|couper{60}|attribut_html)]}|inserer_attribut{class,img-responsive})]
+                [(#LOGO_ARTICLE|image_reduire{900,0}|inserer_attribut{alt,[(#TITRE|couper{60}|attribut_html)]}|inserer_attribut{class,img-responsive})]
                 [(#SET{logo_pour_tumblr,[(#LOGO_ARTICLE|image_reduire{500,0}|liens_absolus|extraire_attribut{src}|urlencode)]})]
             </BOUCLE_article_logo>
         </div>
