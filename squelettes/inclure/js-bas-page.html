@@ -17,9 +17,8 @@
         $('a.spip_out,a.spip_url').attr("target", "_blank");
 
         // Ajouter la class img-responsive aux images
-        $('.spip_documents img').each(function() {
-            $(this).addClass('img-responsive');
-        })
+        $('.spip_documents img').addClass('img-responsive');
+
 
         // Fade in picto rs auchargement, fadein sur entrée, fadeout sur sortie souris
         $('#partage-social a img').fadeTo(500, 0.58);
@@ -31,6 +30,9 @@
                     $(this).fadeTo(500, 0.58);
                 }
         );
+
+            // Ajout class bootstrap aux tableaux
+            $('table.spip').addClass('table table-bordered table-hover table-hover');
 
 
         [(#REM) D'après http://contrib.spip.net/SPIP-FAT-Free-Art-Template ]
