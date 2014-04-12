@@ -4,7 +4,7 @@
 #SET{title,0}
 #SET{byline,0}
 #SET{portrait,0}
-#SET{badge,1}
+#SET{badge,0}
 #SET{color,ffffff}
 #SET{autoplay,0}
 #SET{autopause,1}
@@ -25,7 +25,7 @@
 
 <div class="videoWrapper">
 <iframe
-    src="http://player.vimeo.com/video/[(#ENV{id})]?title=#GET{title}&byline=#GET{byline}&portrait=#GET{portrait}&badge=#GET{badge}&color=#GET{color}&autoplay=#GET{autoplay}&autopause=#GET{autopause}&loop=#GET{loop}"
+    src="http://player.vimeo.com/video/[(#ENV{identifiant})]?title=#GET{title}&byline=#GET{byline}&portrait=#GET{portrait}&badge=#GET{badge}&color=#GET{color}&autoplay=#GET{autoplay}&autopause=#GET{autopause}&loop=#GET{loop}"
     width="#GET{width}"
     height="#GET{height}"
     frameborder="0"
