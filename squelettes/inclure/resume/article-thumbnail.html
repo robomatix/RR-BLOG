@@ -1,7 +1,7 @@
 <BOUCLE_article_thumbnail(ARTICLES){id_article}>            
     <div class="thumbnail">
         <a href="#URL_ARTICLE"[ title="(#TITRE|couper{80}|attribut_html)"]>
-            [(#LOGO_ARTICLE|image_reduire{900,0}|inserer_attribut{alt,[(#TITRE|couper{60}|attribut_html)]})]
+            [(#LOGO_ARTICLE|image_reduire{1000,0}|inserer_attribut{alt,[(#TITRE|couper{60}|attribut_html)]})]
         </a>
         <div class="caption">
             <h3><a href="#URL_ARTICLE"[ title="(#TITRE|couper{80}|attribut_html)"]>#TITRE</a></h3>
