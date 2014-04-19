@@ -462,6 +462,9 @@ p.alert-danger{
 #partage-social p{
     font-size: 14px;
 }
+textarea#texte{
+    margin-bottom: 15px;
+}
 .explication{
     font-size: 14px;
 }
