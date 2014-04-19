@@ -66,6 +66,12 @@
                         return false;"><img src="#CHEMIN{images/linkedin.png}" alt="Linkedin" /></a>
             </div>
         </div>
+        
+        <div class="panel-footer">
+            [(#REM) Forum de l'article ]
+<a href="#forum" name="forum" id="forum"></a>
+[(#INCLURE{fond=comments}{id_article})]       
+        </div>
 
     </article>
     [(#LANG|=={en}|oui)
