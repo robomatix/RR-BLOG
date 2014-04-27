@@ -497,3 +497,6 @@ textarea#texte{
 .explication{
     font-size: 14px;
 }
+ul.spip{
+    list-style: square;
+}
