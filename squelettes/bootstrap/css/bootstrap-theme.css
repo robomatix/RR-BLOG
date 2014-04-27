@@ -366,12 +366,29 @@ h4, .h4 {
 h5, .h5 {
     font-size: 18px;
 }
+h5.spip {
+    font-size: 22px;
+}
 p{
     font-size: 20px;
 }
 code{
-    background-color: #000;
-    color: #fff;
+    background-color: #8cbad8;
+    color: #333;
+    font-size: 20px;
+}
+blockquote{
+    margin: 15px;
+    padding: 15px;
+    border: none;
+    background-color: #eee;
+    
+}
+blockquote p{
+    margin: 0;
+}
+ol{
+    list-style-type: decimal;
 }
 /***********************************/
 /* Ajout Pour compléter bootstrap */
@@ -450,11 +467,20 @@ p.alert-danger{
 /* Ajout RR des lignes sur une seule ligne ! */
 /********************************************/
 .coloration_code {
+    //background: #ddd;
+   // overflow: auto;
+    //white-space: nowrap;
+    padding: 0;
+    margin-bottom: 15px;
+}
+.coloration_code .spip_cadre{
     background: #ddd;
     overflow: auto;
     white-space: nowrap;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 15px;
+}
+.coloration_code .spip_cadre ol{
+    margin-bottom: 0;
 }
 /***************************************/
 /*      Autres personnalisations       */
