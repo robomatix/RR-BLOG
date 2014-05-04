@@ -36,7 +36,7 @@
             [(#REM) Portfolio : album d'images ]
             <B_documents_portfolio>
                 <div class="row">
-                    <BOUCLE_documents_portfolio(DOCUMENTS) {id_article} {mode=document}{extension IN png,jpg,gif} {par num titre, date}{vu=non}>[
+                    <BOUCLE_documents_portfolio(DOCUMENTS) {id_article} {mode=document}{extension IN png,jpg,gif} {par num titre, fichier}{vu=non}>[
                         <div class="col-xs-6 col-md-3">
                             <a href="(#URL_PAGE{portofolio,id_article=#_contenu_article:ID_ARTICLE})#image-#ID_DOCUMENT"
                                type="#MIME_TYPE"
