@@ -65,12 +65,30 @@
                 <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=#URL_SITE_SPIP/#URL_ARTICLE&title=#TITRE" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');
                         return false;"><img src="#CHEMIN{images/linkedin.png}" alt="Linkedin" /></a>
             </div>
+
+
+
+            <B_connexes>
+                <nav class="col-md-12 text-center">
+                    [<h5>Cet article à #GRAND_TOTAL (#GRAND_TOTAL|singulier_ou_pluriel{perso:article_connexe,perso:articles_connexes}) : </h5>]
+                    <ul class="list-group">
+                        <BOUCLE_connexes(ARTICLES_LIES){id_article}{par rang}>
+                            <li class="list-group-item"><a href="#URL_ARTICLE{#ID_ARTICLE_LIE}">#INFO_TITRE{article,#ID_ARTICLE_LIE}</a></li>
+                        </BOUCLE_connexes>
+                    </ul>
+                </nav>
+            </B_connexes>
+
+
         </div>
-        
+
+
+
+
         <div class="panel-footer">
             [(#REM) Forum de l'article ]
-<a href="#forum" name="forum" id="forum"></a>
-[(#INCLURE{fond=comments}{id_article})]       
+            <a href="#forum" name="forum" id="forum"></a>
+            [(#INCLURE{fond=comments}{id_article})]       
         </div>
 
     </article>
