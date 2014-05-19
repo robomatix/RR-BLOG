@@ -14,7 +14,7 @@
         <B_documents_portfolio>
 
             <ul class="list-group">
-                <BOUCLE_documents_portfolio(DOCUMENTS) {id_article} {mode=document}{extension IN png,jpg,gif} {par num titre, fichier}{vu=non}>
+                <BOUCLE_documents_portfolio(DOCUMENTS) {id_article} {mode=document}{extension IN png,jpg,gif} {par num titre, fichier}>
                     <li class="list-group-item">
                         [(#FICHIER
                         |image_reduire{870,0}
